@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kamenni adventura", "Kamenni adventura\Kamenni adventura.csproj", "{B675267B-0824-4A74-9D23-9E246EE170C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B675267B-0824-4A74-9D23-9E246EE170C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B675267B-0824-4A74-9D23-9E246EE170C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B675267B-0824-4A74-9D23-9E246EE170C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B675267B-0824-4A74-9D23-9E246EE170C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {392D3DF1-D7AA-4D96-9224-81D2FBA01763}
+	EndGlobalSection
+EndGlobal
