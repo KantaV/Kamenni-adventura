@@ -26,7 +26,8 @@ namespace Kamenni_adventura
         private int speed = 5,gravitace=4;
         private int predchozi=226;
         private bool povolSkok = true,koukaVlevo=true;
-        
+
+        Postava walter = new Postava(true);
 
         private async void timer1_Tick(object sender, EventArgs e)
         {
@@ -59,16 +60,25 @@ namespace Kamenni_adventura
             }
             if (Form1.attack)
             {
-                delay = 1;
+                delay = 100;
                 SoundPlayer hankWalte=new SoundPlayer(Resources.Hank_rve);
                 hankWalte.Play();
-                if (pictureBoxPostava.Location.X >= pictureBoxEnemy.Location.X)
+
+                if (pictureBoxPostava.Location.X >= pictureBoxEnemy.Location.X&&pictureBoxPostava.Location.X<=pictureBoxEnemy.Location.X+20)
                 {
+                    pictureBoxPostava.Image = Resources.hankAttack;
+                    if (!koukaVlevo) pictureBoxPostava.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);              
                     SoundPlayer jaJsemTenKdoKlepe = new SoundPlayer(Resources.JaJsemTenKdoKlepe);
                     jaJsemTenKdoKlepe.Play();
                     pictureBoxEnemy.Image = Resources.WalterSmrtResized;
                     await Task.Delay(2500);
-                    pictureBoxEnemy.Hide();
+                    for (int i = 0; i < 5; i++)         //pocet bliknuti
+                    {
+                        await Task.Delay(100);
+                        pictureBoxEnemy.Show();
+                        await Task.Delay(100);
+                        pictureBoxEnemy.Hide();
+                    }
                 }
             }
 
@@ -95,7 +105,7 @@ namespace Kamenni_adventura
 
 
             predchozi = pictureBoxPostava.Top;
-            if (pictureBoxPostava.Top < 226)
+            if (pictureBoxPostava.Top < 229)
             {
                 pictureBoxPostava.Top += gravitace;
             }
