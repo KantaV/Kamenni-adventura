@@ -30,30 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBoxPostava = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxEnemy = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPostava = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnemy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPostava)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Cyan;
+            this.panel1.Controls.Add(this.pictureBoxEnemy);
             this.panel1.Controls.Add(this.pictureBoxPostava);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(889, 357);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBoxPostava
-            // 
-            this.pictureBoxPostava.Image = global::Kamenni_adventura.Properties.Resources.hank2;
-            this.pictureBoxPostava.Location = new System.Drawing.Point(226, 234);
-            this.pictureBoxPostava.Name = "pictureBoxPostava";
-            this.pictureBoxPostava.Size = new System.Drawing.Size(55, 120);
-            this.pictureBoxPostava.TabIndex = 0;
-            this.pictureBoxPostava.TabStop = false;
             // 
             // panel2
             // 
@@ -69,6 +63,26 @@
             this.timer1.Interval = 20;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBoxEnemy
+            // 
+            this.pictureBoxEnemy.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxEnemy.Image = global::Kamenni_adventura.Properties.Resources.WalterZijiciResized;
+            this.pictureBoxEnemy.Location = new System.Drawing.Point(751, 261);
+            this.pictureBoxEnemy.Name = "pictureBoxEnemy";
+            this.pictureBoxEnemy.Size = new System.Drawing.Size(71, 93);
+            this.pictureBoxEnemy.TabIndex = 1;
+            this.pictureBoxEnemy.TabStop = false;
+            // 
+            // pictureBoxPostava
+            // 
+            this.pictureBoxPostava.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxPostava.Image = global::Kamenni_adventura.Properties.Resources.hank2;
+            this.pictureBoxPostava.Location = new System.Drawing.Point(226, 234);
+            this.pictureBoxPostava.Name = "pictureBoxPostava";
+            this.pictureBoxPostava.Size = new System.Drawing.Size(55, 120);
+            this.pictureBoxPostava.TabIndex = 0;
+            this.pictureBoxPostava.TabStop = false;
+            // 
             // InGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -78,6 +92,7 @@
             this.Name = "InGame";
             this.Size = new System.Drawing.Size(889, 506);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEnemy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPostava)).EndInit();
             this.ResumeLayout(false);
 
@@ -89,5 +104,6 @@
         private System.Windows.Forms.PictureBox pictureBoxPostava;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBoxEnemy;
     }
 }

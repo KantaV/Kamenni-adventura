@@ -88,5 +88,34 @@ namespace Kamenni_adventura.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Vyhledává lokalizovaný prostředek typu System.IO.UnmanagedMemoryStream podobný System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream JaJsemTenKdoKlepe {
+            get {
+                return ResourceManager.GetStream("JaJsemTenKdoKlepe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WalterSmrtResized {
+            get {
+                object obj = ResourceManager.GetObject("WalterSmrtResized", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WalterZijiciResized {
+            get {
+                object obj = ResourceManager.GetObject("WalterZijiciResized", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

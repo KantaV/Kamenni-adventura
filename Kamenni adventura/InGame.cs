@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Net.Http.Headers;
 using System.Resources;
 using System.Text;
@@ -19,13 +20,15 @@ namespace Kamenni_adventura
         public InGame()
         {
             InitializeComponent();
+            pictureBoxPostava.BringToFront();
         }
 
         private int speed = 5,gravitace=4;
         private int predchozi=226;
         private bool povolSkok = true,koukaVlevo=true;
+        
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private async void timer1_Tick(object sender, EventArgs e)
         {
             int delay=0;
             if (predchozi != pictureBoxPostava.Top)
@@ -56,9 +59,17 @@ namespace Kamenni_adventura
             }
             if (Form1.attack)
             {
-                delay = 100;
-                System.Media.SoundPlayer prehravac=new System.Media.SoundPlayer(Resources.Hank_rve);
-                prehravac.Play();
+                delay = 1;
+                SoundPlayer hankWalte=new SoundPlayer(Resources.Hank_rve);
+                hankWalte.Play();
+                if (pictureBoxPostava.Location.X >= pictureBoxEnemy.Location.X)
+                {
+                    SoundPlayer jaJsemTenKdoKlepe = new SoundPlayer(Resources.JaJsemTenKdoKlepe);
+                    jaJsemTenKdoKlepe.Play();
+                    pictureBoxEnemy.Image = Resources.WalterSmrtResized;
+                    await Task.Delay(2500);
+                    pictureBoxEnemy.Hide();
+                }
             }
 
             if(koukaVlevo)
@@ -70,7 +81,7 @@ namespace Kamenni_adventura
                     --delay;
                 }
             }
-            else
+            else  //kouka vpravo
             {
                 pictureBoxPostava.Image = Resources.hank2;
                 pictureBoxPostava.Image.RotateFlip(RotateFlipType.RotateNoneFlipX);

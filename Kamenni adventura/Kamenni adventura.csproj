@@ -114,5 +114,17 @@
   <ItemGroup>
     <None Include="Resources\Hank_rve.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WalterSmrtResized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WalterZijiciResized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\record20211116211708.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JaJsemTenKdoKlepe.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

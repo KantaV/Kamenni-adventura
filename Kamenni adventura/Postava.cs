@@ -8,6 +8,5 @@ namespace Kamenni_adventura
 {
     internal class Postava
     {
-        private int hp;
     }
 }
